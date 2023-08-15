@@ -6,8 +6,8 @@ import (
 	"net/http"
 
 	"github.com/PuerkitoBio/goquery"
-
 	"github.com/kenjinezumi/track-scan/backend/services"
+	"github.com/kenjinezumi/track-scan/backend/utils"
 )
 
 func main() {
@@ -41,7 +41,10 @@ func main() {
 	cookiesResponse := services.AnalyzeCookies(resp)
 	fmt.Println(cookiesResponse)
 
-	knownNetworks := []string{"adnetwork.com", "tracker.net"} // Add your known ad or tracking networks
+	knownNetworks, err := utils.LoadDomains("list_domains.txt") // Add your known ad or tracking networks
+	if err != nil {
+		log.Fatal("Error loading the domains:", err)
+	}
 	externalResResult := services.ExternalResourcesAnalyser(doc, knownNetworks...)
 	fmt.Println(externalResResult)
 
