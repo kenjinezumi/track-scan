@@ -1,0 +1,37 @@
+Ad Networks:
+1. Google AdSense - google.com
+2. DoubleClick by Google - doubleclickbygoogle.com
+3. Taboola - taboola.com
+4. Outbrain - outbrain.com
+5. Media.net - media.net
+6. Amazon Advertising - advertising.amazon.com
+7. AppNexus (now part of Xandr) - xandr.com
+8. Criteo - criteo.com
+9. OpenX - openx.com
+
+Tracking Services and Analytics Platforms:
+1. Google Analytics - google.com
+google.com
+facebook.com
+firebase.google.com
+mixpanel.com
+matomo.org
+segment.com
+crazyegg.com
+mouseflow.com
+hotjar.com
+cloudflare.com
+akamai.com
+aws.amazon.com/cloudfront
+stackpath.com
+keycdn.com
+facebook.com
+cj.com
+rakutenadvertising.com
+impact.com
+shareasale.com
+acxiom.com
+experian.com
+oracle.com
+corelogic.com
+equifax.com
