@@ -6,8 +6,7 @@ import (
 	"net/http"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/kenjinezumi/track-scan/backend/services"
-	"github.com/kenjinezumi/track-scan/backend/utils"
+
 )
 
 func main() {
@@ -47,5 +46,11 @@ func main() {
 	}
 	externalResResult := services.ExternalResourcesAnalyser(doc, knownNetworks...)
 	fmt.Println(externalResResult)
+
+	cspReport := services.NewCSPInspector().InspectCSP(resp)
+	fmt.Println(cspReport)
+	for directive, values := range cspReport.Directives {
+		fmt.Println(directive, ":", values)
+	}
 
 }
